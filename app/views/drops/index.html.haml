@@ -1,0 +1,11 @@
+.container
+  .row
+    .column.column-50.column-offset-25{style: "text-align: center; padding-top: 4em"}
+      %h1
+        Search
+      = form_tag "/drops", method: "post" do
+        %span{style: "display: inline"}
+          %span{style: "display: inline"}
+            = text_field_tag :query, nil, style: "width: 70%;"
+          %span{style: "display: inline; padding-left: 10px"}
+            = submit_tag "Search"

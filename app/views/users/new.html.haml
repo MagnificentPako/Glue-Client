@@ -1,0 +1,11 @@
+.container
+  .row
+    .column
+    .column{style: "text-align: center; padding-top: 4em"}
+      %h2
+        Login
+      = form_tag "/login", method: "post", remote: true do
+        = text_field_tag :name, nil, placeholder: "Name", required: true
+        = password_field_tag :password, nil, placeholder: "Password", required: true
+        = submit_tag "login"
+    .column

@@ -1,0 +1,19 @@
+.container
+  .row
+    .column.column-50.column-offset-25{style: "text-align: center; padding-top: 4em;"}
+      %span
+        %h1
+          %b
+            = @drop["name"]
+      %a.button{href: "/"}
+        Home
+      %table
+        %thead
+          %th{style: "text-align: center"}
+            Version
+          %tbody
+            - @versions.each do |version|
+              %tr
+                %td{style: "text-align: center"}
+                  %a{href: "/drop/#{@drop['name']}/#{version}", style:" display: block"}
+                    = version

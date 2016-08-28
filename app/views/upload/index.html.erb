@@ -1,9 +1,0 @@
-<div class="container" style="background-color: rgb(120,120,120); padding: 4em;">
-  <%= form_tag "/upload" , method: "post", remote: true do %>
-    <%= text_field_tag :jwt %>
-    <%= text_field_tag :name %>
-    <%= text_field_tag :version %>
-    <%= text_area_tag :content %>
-    <%= submit_tag %>
-  <% end %>
-</div>

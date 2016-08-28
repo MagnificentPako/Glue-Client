@@ -1,0 +1,23 @@
+.container
+  .row{style: "padding-top: 0.5em"}
+    .column.column-50.column-offset-50{style: "text-align: right"}
+      - unless cookies[:jwt]
+        %a.button.button-outline.button-small{href: "/login"}
+          Login
+        %a.button.button-small{href: "/register"}
+          Register
+      - else
+        %a.button.button-outline.button-small{href: "/logout"}
+          Logout
+  .row
+    .column.column-50.column-offset-25{style: "text-align: center; padding-top: 4em"}
+      %h1
+        Welcome to Glue
+
+      %ul{style: "list-style: none; display: inline"}
+        %li
+          %a.button{href: "/drops"}
+            Search
+          - if cookies[:jwt]
+            %a.button{href: "/drops/new"}
+              Upload

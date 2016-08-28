@@ -1,0 +1,25 @@
+.button-black {
+  background-color: black;
+  border-color: black;
+}
+.button-black.button-outline {
+  color: black;
+}
+.button-black.button-clear {
+  color: black;
+}
+
+/* Applying size variation */
+.button-small {
+  font-size: .8rem !important;
+  height: 2.8rem !important;
+  line-height: 2.8rem !important;
+  padding: 0 1.5rem !important;
+}
+
+.button-large {
+  font-size: 1.4rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  padding: 0 2rem;
+}
