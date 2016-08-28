@@ -10,12 +10,13 @@ Rails.application.routes.draw do
   post "/login" => "users#login"
 
   get "/register" => "users#create"
-  post "/register" => "users#register" 
+  post "/register" => "users#register"
 
   get "/logout" => "users#logout"
 
   get "/drops" => "drops#index"
   get "/drops/search/:query" => "drops#search"
+  get "/drops/search", to: redirect("/drops")
   post "/drops" => "drops#vanity" #used to redirect user to readable url
 
   get "/drops/new" => "upload#index"
