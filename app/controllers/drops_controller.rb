@@ -19,7 +19,7 @@ class DropsController < ApplicationController
   end
 
   def detail
-    response = HTTParty.get("https://glue-api.herokuapp.com/api/v1/drops/get", query: {:name => params[:name]})
+    response = HTTParty.get("https://glue-api.herokuapp.com/api/v1/drops/get", query: {:name => params[:name], :version => params[:version]})
     @drop = JSON.parse(response.body)
   end
 
